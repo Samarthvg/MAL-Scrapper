@@ -12,12 +12,12 @@ outputFile = open('output.txt', 'w', encoding="utf-8")
 
 for newSoup in borderDark:
 
-    remove_helpful = newSoup.find_all('a', "button_form")
-    remove_readmore = newSoup.find_all('a', "js-toggle-review-button")
+    removeHelpful = newSoup.find_all('a', "button_form")
+    removeReadmore = newSoup.find_all('a', "js-toggle-review-button")
     profile = newSoup.find_all('a', href=re.compile("https://myanimelist.net/profile/"))
     reviews = newSoup.find_all('div', "spaceit textReadability word-break pt8 mt8")
     
-    for helpful,readmore in zip(remove_helpful, remove_readmore):
+    for helpful,readmore in zip(removeHelpful, removeReadmore):
         helpful.decompose()
         readmore.decompose()
     for a in profile:
