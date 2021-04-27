@@ -1,2 +1,2 @@
 # MAL-Scrapper
-A python web scrapper for MyAnimeList.
+A python web scrapper for MyAnimeList (Evangelion reviews).
